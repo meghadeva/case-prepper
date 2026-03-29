@@ -126,9 +126,12 @@ Evaluate the candidate's response against the rubric and return JSON scores and 
   const data = await response.json();
   const rawText = data.content?.[0]?.text || '';
 
+  // Strip markdown code fences if Claude wraps the JSON in ```json ... ```
+  const cleanedText = rawText.replace(/^```(?:json)?\s*/i, '').replace(/\s*```$/, '').trim();
+
   let parsed;
   try {
-    parsed = JSON.parse(rawText);
+    parsed = JSON.parse(cleanedText);
   } catch {
     throw new Error(`Failed to parse Claude response as JSON: ${rawText}`);
   }
