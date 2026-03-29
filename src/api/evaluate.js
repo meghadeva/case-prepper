@@ -8,11 +8,11 @@
  * Only dimensions that are listed in step.dimensions_tested are scored;
  * others are returned as null.
  *
- * Environment variable required:
- *   REACT_APP_ANTHROPIC_API_KEY — your Anthropic API key
+ * Calls go through /api/evaluate (Vercel serverless proxy) to keep the
+ * API key secure on the server side.
  */
 
-const ANTHROPIC_API_URL = 'https://api.anthropic.com/v1/messages';
+const ANTHROPIC_API_URL = '/api/evaluate';
 const MODEL = 'claude-sonnet-4-6';
 
 const DIMENSIONS = ['Structure', 'Insight', 'Math', 'Communication'];
@@ -45,13 +45,6 @@ export async function evaluateAnswer({
   scoringGuide,
   userAnswer,
 }) {
-  const apiKey = process.env.REACT_APP_ANTHROPIC_API_KEY;
-  if (!apiKey) {
-    throw new Error(
-      'REACT_APP_ANTHROPIC_API_KEY is not set. Add it to your .env file.'
-    );
-  }
-
   const activeDimensions = DIMENSIONS.filter((d) =>
     dimensionsTested.includes(d)
   );
@@ -116,9 +109,6 @@ Evaluate the candidate's response against the rubric and return JSON scores and 
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
-      'x-api-key': apiKey,
-      'anthropic-version': '2023-06-01',
-      'anthropic-dangerous-direct-browser-calls': 'true',
     },
     body: JSON.stringify({
       model: MODEL,
@@ -130,7 +120,7 @@ Evaluate the candidate's response against the rubric and return JSON scores and 
 
   if (!response.ok) {
     const errorText = await response.text();
-    throw new Error(`Claude API error ${response.status}: ${errorText}`);
+    throw new Error(`Evaluation API error ${response.status}: ${errorText}`);
   }
 
   const data = await response.json();
