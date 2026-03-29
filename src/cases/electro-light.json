@@ -1,0 +1,220 @@
+{
+  "id": "electro-light",
+  "title": "Electro-Light",
+  "client": "SuperSoda",
+  "industry": "Consumer Goods / Beverages",
+  "type": "Market Entry / Product Launch",
+  "difficulty": "intermediate",
+  "duration_minutes": 25,
+  "overview": "SuperSoda, a top-three US beverage producer, is evaluating the launch of Electro-Light — a new flavored sports drink with lower sugar and higher electrolyte content than competitors. The VP of Marketing has asked McKinsey to analyze key launch factors and internal capabilities.",
+  "prompt": "Our client is SuperSoda, a top-three beverage producer in the United States. SuperSoda leads its own brand design, marketing, and sales efforts, owns its entire beverage supply chain including production of concentrates, bottling, packaging, and distribution to retail outlets. The company has a considerable number of brands across carbonated and noncarbonated drinks, five large bottling plants throughout the country, and distribution agreements with most major retailers.\n\nSuperSoda is evaluating the launch of a new product — a flavored sports drink called Electro-Light. Sports drinks are usually designed to replenish energy with sugars and electrolytes in the body. Electro-Light has been formulated to focus more on electrolyte replenishment and has a lower sugar content compared to most other sports drinks. The company expects this product to capitalize on the recent trend away from high-sugar products.\n\nSuperSoda's VP of Marketing has asked McKinsey to help analyze key factors surrounding the launch of Electro-Light and the company's internal capabilities to support that effort.",
+  "steps": [
+    {
+      "id": "clarification",
+      "sequence": 1,
+      "title": "Clarifying Questions",
+      "type": "clarification",
+      "dimensions_tested": ["Structure", "Communication"],
+      "interviewer_prompt": "Before we dive in, do you have any clarifying questions about the case?",
+      "context_note": "Candidate should ask 2–3 targeted questions to bound the problem. Good questions: What does success look like (revenue target, market share)? What is the timeline for launch? What geographies is SuperSoda considering? Are there budget constraints? Avoid asking for information already provided.",
+      "model_answer_outline": {
+        "strong_questions": [
+          "What does SuperSoda define as a successful launch — is there a target revenue, market share, or profitability threshold?",
+          "What is the proposed launch timeline?",
+          "Is this a national launch or regional?",
+          "What is the target consumer segment — athletes, health-conscious consumers, general population?",
+          "Are there budget constraints on marketing or capital expenditure?"
+        ],
+        "weak_questions_to_avoid": [
+          "Asking for information already in the prompt (e.g., what does SuperSoda do?)",
+          "Asking more than 4–5 questions without prioritization"
+        ]
+      },
+      "scoring_guide": {
+        "Structure": "Did they ask logically grouped, prioritized questions rather than a scattered list?",
+        "Communication": "Were questions concise, confident, and framed professionally?"
+      }
+    },
+    {
+      "id": "framework",
+      "sequence": 2,
+      "title": "Framework / Key Factors",
+      "type": "framework",
+      "dimensions_tested": ["Structure", "Insight"],
+      "interviewer_prompt": "What key factors should SuperSoda consider when deciding whether or not to launch Electro-Light?",
+      "context_note": "This is the framework step. Candidate should take 60–90 seconds to structure before answering. Look for a MECE framework covering: Customers, Competition, Costs/Profitability, Company Capabilities, Channels. Insight means going beyond the obvious (e.g., recognizing cannibalization risk, supply chain readiness, competitor retaliation).",
+      "model_answer_outline": {
+        "buckets": [
+          {
+            "name": "Consumers",
+            "points": ["Who drinks sports drinks? Segment analysis (athletes, fitness-conscious, general)", "Is there demand for a low-sugar electrolyte product?", "Willingness to pay and price sensitivity"]
+          },
+          {
+            "name": "Competition",
+            "points": ["Key players: CoolSweat, RecoverPlus, and 'Other'", "How will competitors react to entry?", "Is the market growing or mature?"]
+          },
+          {
+            "name": "Costs & Profitability",
+            "points": ["Production cost vs. target price — margin analysis", "Fixed vs. variable cost structure", "Break-even volume and market share required"]
+          },
+          {
+            "name": "Company Capabilities",
+            "points": ["Does SuperSoda have relevant marketing/sales capabilities for sports drinks?", "Production capacity — can existing plants accommodate Electro-Light?", "Distribution network — are current retail channels appropriate?"]
+          },
+          {
+            "name": "Channels",
+            "points": ["Ideal distribution: grocery, convenience, gyms, online?", "Retailer willingness to stock a new SKU", "Cannibalization risk with existing SuperSoda products"]
+          }
+        ],
+        "key_insight": "Recognizing that Electro-Light's low-sugar positioning is a differentiator vs. CoolSweat/RecoverPlus but requires consumer education spend, and that SuperSoda's existing distribution is a key competitive advantage."
+      },
+      "scoring_guide": {
+        "Structure": "Was the framework MECE, logically ordered, and covered all major dimensions (market, competition, financials, capabilities)?",
+        "Insight": "Did they go beyond a generic '4Cs' to identify sports-drink-specific considerations like cannibalization, retailer power, or health trend tailwinds?"
+      }
+    },
+    {
+      "id": "exhibit",
+      "sequence": 3,
+      "title": "Market Exhibit Analysis",
+      "type": "exhibit",
+      "dimensions_tested": ["Structure", "Insight"],
+      "interviewer_prompt": "Your team has gathered the following information about the US sports drink market. Please walk me through what you see and what it means for Electro-Light.",
+      "exhibit": {
+        "type": "nested_pie_chart",
+        "description": "Share of US Sports-Drink Market",
+        "source": "McKinsey practice case",
+        "image_url": "https://www.mckinsey.com/~/media/mckinsey/careers/interviewing/electro-light/exhibit.png",
+        "data": {
+          "total_market_gallons": 8000000000,
+          "outer_pie": {
+            "label": "Total Sports Drinks Market (100% = 8 billion gallons)",
+            "segments": [
+              { "name": "Energy drinks", "share_pct": 95 },
+              { "name": "Electrolyte drinks", "share_pct": 5 }
+            ]
+          },
+          "inner_pie": {
+            "label": "Electrolyte Drinks Market (breakdown by brand)",
+            "segments": [
+              { "name": "CoolSweat", "share_pct": 20 },
+              { "name": "RecoverPlus", "share_pct": 10 },
+              { "name": "Other", "share_pct": 70 }
+            ]
+          }
+        },
+        "text_summary": "Nested pie chart showing: Outer pie — 95% energy drinks, 5% electrolyte drinks out of 8 billion gallons total. Inner pie (electrolyte drinks only) — CoolSweat 20%, RecoverPlus 10%, Other 70%."
+      },
+      "context_note": "Candidate should: (1) describe what they see, (2) do the math to size the electrolyte market (5% × 8B = 400M gallons), (3) note the fragmented 'Other' = 70% as opportunity, (4) observe that Electro-Light would be entering a small but growing niche, (5) connect to competitive positioning vs. CoolSweat and RecoverPlus.",
+      "model_answer_outline": {
+        "observations": [
+          "Electrolyte drinks are only 5% of the sports drink market — a niche but potentially growing segment given health trends",
+          "The electrolyte market is fragmented: 70% is 'Other', suggesting no dominant player has locked up the category",
+          "CoolSweat leads at 20%, RecoverPlus at 10% — relatively weak incumbents",
+          "Total electrolyte market = 5% × 8B gallons = 400 million gallons"
+        ],
+        "so_what": "The fragmented 'Other' category represents whitespace for Electro-Light. The small absolute size of the electrolyte market means SuperSoda needs to be realistic about revenue potential, but the lack of a dominant brand is an opportunity."
+      },
+      "scoring_guide": {
+        "Structure": "Did they systematically describe the chart before jumping to conclusions? Did they quantify the market size?",
+        "Insight": "Did they identify the fragmented 'Other' as an opportunity? Did they connect market structure to competitive strategy?"
+      }
+    },
+    {
+      "id": "math",
+      "sequence": 4,
+      "title": "Break-Even Analysis",
+      "type": "math",
+      "dimensions_tested": ["Math", "Structure"],
+      "interviewer_prompt": "Based on the target price and upfront fixed costs, what share of the electrolyte drink market would Electro-Light need to capture to break even?",
+      "given_data": {
+        "format": "16-ounce bottle (1/8 gallon)",
+        "price_to_retailer_per_bottle": 2.00,
+        "fixed_costs_total": 40000000,
+        "variable_cost_per_bottle": 1.90
+      },
+      "context_note": "Candidate must walk through the math out loud. Penalize if they rush or skip steps. Step 1: contribution margin = $2.00 - $1.90 = $0.10/bottle. Step 2: breakeven units = $40M / $0.10 = 400M bottles. Step 3: convert bottles to gallons: 400M bottles ÷ 8 bottles/gallon = 50M gallons. Step 4: electrolyte market = 400M gallons. Step 5: share = 50M / 400M = 12.5%. Conclusion: Electro-Light must become #2 in the market to break even.",
+      "model_answer_outline": {
+        "steps": [
+          {
+            "step": 1,
+            "label": "Contribution margin per bottle",
+            "calculation": "$2.00 price − $1.90 variable cost = $0.10 per bottle"
+          },
+          {
+            "step": 2,
+            "label": "Break-even units",
+            "calculation": "$40,000,000 fixed costs ÷ $0.10 per bottle = 400,000,000 bottles"
+          },
+          {
+            "step": 3,
+            "label": "Convert units to gallons",
+            "calculation": "400,000,000 bottles ÷ 8 bottles per gallon = 50,000,000 gallons"
+          },
+          {
+            "step": 4,
+            "label": "Size the electrolyte market in gallons",
+            "calculation": "8,000,000,000 total gallons × 5% = 400,000,000 gallons"
+          },
+          {
+            "step": 5,
+            "label": "Required market share",
+            "calculation": "50,000,000 ÷ 400,000,000 = 12.5%"
+          }
+        ],
+        "conclusion": "Electro-Light needs 12.5% market share to break even — making it the #2 brand in the electrolyte segment, surpassing RecoverPlus (10%) but behind CoolSweat (20%). This is an ambitious but not unrealistic target given the 70% 'Other' pool.",
+        "correct_answer": "12.5% market share"
+      },
+      "scoring_guide": {
+        "Math": "Was the calculation correct? Did they set up the equation clearly (contribution margin → breakeven units → gallons → share)?",
+        "Structure": "Did they talk through each step rather than just blurting an answer? Did they sanity-check the result?"
+      }
+    },
+    {
+      "id": "recommendation",
+      "sequence": 5,
+      "title": "Recommendation",
+      "type": "recommendation",
+      "dimensions_tested": ["Structure", "Insight", "Communication"],
+      "interviewer_prompt": "SuperSoda executives believe the company's top-three position gives it strategic impetus. What would SuperSoda need to do to gain the required 12.5% market share for Electro-Light following its launch?",
+      "context_note": "Candidate should give a structured recommendation with 3 clear workstreams. Strong answers connect back to earlier framework buckets. Look for: (1) consumer/product positioning, (2) marketing/branding, (3) operational execution. Bonus: flag cannibalization risk and recommend monitoring. Avoid vague answers like 'invest in marketing'.",
+      "model_answer_outline": {
+        "recommendation": "SuperSoda should launch Electro-Light, but success requires excellence across three areas:",
+        "workstreams": [
+          {
+            "name": "1. Product-Market Fit",
+            "actions": [
+              "Confirm through consumer research that low-sugar electrolyte positioning resonates with target segment (e.g., fitness-conscious millennials, post-workout consumers)",
+              "Price competitively vs. CoolSweat — likely at or slightly below CoolSweat's shelf price",
+              "Ensure product quality and taste meet or exceed alternatives"
+            ]
+          },
+          {
+            "name": "2. Marketing & Brand Building",
+            "actions": [
+              "Launch an introductory campaign leveraging SuperSoda's scale to secure premium shelf placement",
+              "Position Electro-Light within the top 3 of the electrolyte segment via awareness spend",
+              "Anticipate and plan for competitive responses from CoolSweat (e.g., price cuts, promotions)",
+              "Monitor cannibalization of other SuperSoda sports/hydration products"
+            ]
+          },
+          {
+            "name": "3. Operational Readiness",
+            "actions": [
+              "Allocate capacity at one or more of the 5 bottling plants before launch",
+              "Secure distribution commitments from major retailers ahead of launch",
+              "Build in production ramp-up plan to respond to demand spikes post-launch"
+            ]
+          }
+        ],
+        "risks": ["Cannibalization of existing SuperSoda products", "Competitor retaliation (price wars, marketing spend)", "Consumer education cost for a new format"],
+        "next_steps": ["Consumer preference study", "Capacity/cost analysis at specific bottling plants", "Retailer negotiation strategy"]
+      },
+      "scoring_guide": {
+        "Structure": "Was the recommendation crisp, with a clear thesis and logical sub-points? Did they lead with 'launch' or 'don't launch'?",
+        "Insight": "Did they connect recommendations back to the data (12.5% is achievable given 70% Other), flag cannibalization or competitor response?",
+        "Communication": "Was the delivery confident and concise? Did they synthesize rather than list?"
+      }
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "id": "talbot-trucks",
+  "title": "Talbot Trucks",
+  "client": "Talbot Trucks",
+  "industry": "Industrial / Automotive",
+  "type": "Operations / Cost Reduction",
+  "difficulty": "intermediate",
+  "duration_minutes": 25,
+  "overview": "Talbot Trucks is a European commercial vehicle manufacturer facing margin pressure. They have asked McKinsey to help identify operational improvements and cost reduction opportunities.",
+  "prompt": "Talbot Trucks is a European manufacturer of commercial trucks. Over the past three years, margins have declined significantly due to rising input costs and competitive pressure. McKinsey has been asked to identify cost reduction opportunities across the value chain. [Full case content coming soon]",
+  "steps": []
+}

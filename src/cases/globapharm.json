@@ -1,0 +1,12 @@
+{
+  "id": "globapharm",
+  "title": "GlobaPharm",
+  "client": "GlobaPharm",
+  "industry": "Healthcare / Pharmaceuticals",
+  "type": "M&A / Growth Strategy",
+  "difficulty": "advanced",
+  "duration_minutes": 25,
+  "overview": "GlobaPharm is a global pharmaceutical company evaluating an acquisition target in the biotech space. McKinsey has been asked to help assess the deal rationale and integration considerations.",
+  "prompt": "GlobaPharm is a large global pharmaceutical company. They are considering acquiring a mid-sized biotech firm and have asked McKinsey to help evaluate the strategic rationale and key risks of the acquisition. [Full case content coming soon]",
+  "steps": []
+}

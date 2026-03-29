@@ -1,0 +1,12 @@
+{
+  "id": "national-education",
+  "title": "National Education",
+  "client": "National Education",
+  "industry": "Public Sector / Education",
+  "type": "Operations / Public Policy",
+  "difficulty": "intermediate",
+  "duration_minutes": 25,
+  "overview": "A national government wants to improve educational outcomes in underperforming schools. McKinsey has been asked to help design an intervention strategy.",
+  "prompt": "A national government has observed that a significant portion of its primary schools are underperforming on standardized metrics. The Ministry of Education has asked McKinsey to develop a strategy to identify root causes and design targeted interventions. [Full case content coming soon]",
+  "steps": []
+}

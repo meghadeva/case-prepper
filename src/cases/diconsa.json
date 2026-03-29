@@ -1,0 +1,12 @@
+{
+  "id": "diconsa",
+  "title": "Diconsa",
+  "client": "Diconsa",
+  "industry": "Public Sector / Social Impact",
+  "type": "Operations / Social Enterprise",
+  "difficulty": "intermediate",
+  "duration_minutes": 25,
+  "overview": "Diconsa is a Mexican government-owned company that operates a network of rural stores. The government wants to explore using the Diconsa network to expand financial services access to underserved rural communities.",
+  "prompt": "Diconsa is a Mexican government-owned company that sells basic necessities through a network of 22,000 rural stores. The Mexican government is considering whether Diconsa can be used as a platform to provide basic financial services (e.g., bill payment, cash transfers) to rural communities. [Full case content coming soon]",
+  "steps": []
+}

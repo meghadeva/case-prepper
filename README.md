@@ -1,70 +1,65 @@
-# Getting Started with Create React App
+# 🧠 MBA Case Prepper
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**Your personal McKinsey-style case interview coach — available 24/7, no scheduling required.**
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🎯 What Is This?
 
-### `npm start`
+MBA Case Prepper is a web app designed to help MBA candidates prepare for **consulting case interviews** — the famously tough interview format used by firms like McKinsey, BCG, and Bain.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Instead of hunting for a practice partner or paying for expensive coaching, you can open this app and run through a full, realistic case interview on your own — at any time, from anywhere.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## 🚀 How It Works
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. **Pick a case** — Choose from a library of real McKinsey-published cases
+2. **Work through it step by step** — The app guides you just like a real interviewer would, one prompt at a time
+3. **Type or speak your answer** — However feels natural to you
+4. **Get instant AI feedback** — After each step, you'll see a score and explanation across four dimensions:
+   - 🏗️ **Structure** — Did you break the problem down logically?
+   - 💡 **Insight** — Did you identify what actually matters?
+   - 🔢 **Math** — Were your calculations correct and clean?
+   - 🗣️ **Communication** — Was your answer clear and confident?
+5. **Read your full debrief** — At the end of every case, get a comprehensive summary of how you performed and what to work on
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 📚 Cases Included (Phase 1)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+All cases are sourced directly from McKinsey's publicly available materials:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+| Case | Industry | Status |
+|------|----------|--------|
+| Electro-Light | Consumer Goods / Beverages | ✅ Fully built |
+| + 7 more | Various | 🔜 Coming soon |
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 🛠️ Under the Hood
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+*(For the curious — skip this if you're not technical!)*
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- Built with **React** — the same technology that powers Facebook and Instagram
+- Uses the **Claude AI API** (by Anthropic) purely for evaluating your answers — no AI is generating the case content
+- Case content is stored as structured data files, not generated on the fly
+- No login required in this version — everything stays on your device
+- Deployed via **GitHub → Hostinger**
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
+## 🗺️ What's Coming Next
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- 🔐 User accounts + progress tracking
+- 📊 Performance trends over time
+- 🏦 Cases from BCG, Bain, and other top firms
+- 🎙️ Improved voice input support
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
+## 🙋‍♀️ Built By
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Made with ❤️ by Megha as a personal MBA case prep tool.
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Questions or ideas? Reach out at megha.s.devaraj@gmail.com

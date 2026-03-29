@@ -1,0 +1,12 @@
+{
+  "id": "shops-corporation",
+  "title": "Shops Corporation",
+  "client": "Shops Corporation",
+  "industry": "Retail",
+  "type": "Growth Strategy / Market Entry",
+  "difficulty": "intermediate",
+  "duration_minutes": 25,
+  "overview": "Shops Corporation is a large retail chain evaluating expansion into a new geography. McKinsey has been asked to assess market attractiveness and entry strategy.",
+  "prompt": "Shops Corporation is a large US retail chain considering expansion into a new international market. The CEO has asked McKinsey to evaluate the attractiveness of the target market and recommend an entry strategy. [Full case content coming soon]",
+  "steps": []
+}

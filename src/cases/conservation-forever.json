@@ -1,0 +1,12 @@
+{
+  "id": "conservation-forever",
+  "title": "Conservation Forever",
+  "client": "Conservation Forever",
+  "industry": "Non-Profit / Environmental",
+  "type": "Operations / Non-Profit Strategy",
+  "difficulty": "beginner",
+  "duration_minutes": 25,
+  "overview": "Conservation Forever is an environmental non-profit looking to maximize its impact. McKinsey has been asked to help prioritize conservation investments across competing projects.",
+  "prompt": "Conservation Forever is a large environmental non-profit organization with a budget of $50 million per year. The executive director has asked McKinsey to help develop a framework for prioritizing conservation projects to maximize measurable environmental impact. [Full case content coming soon]",
+  "steps": []
+}
