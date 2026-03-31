@@ -14,8 +14,7 @@ export default function Nav({ currentPage, onNavigate }) {
         className="main-nav__brand"
         onClick={() => onNavigate('home')}
       >
-        <span className="main-nav__brand-icon">📊</span>
-        <span className="main-nav__brand-text">MBA Case Prepper</span>
+        MBA Case Prepper
       </button>
 
       <div className="main-nav__links">

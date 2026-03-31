@@ -9,10 +9,10 @@ const DIMENSION_META = {
 };
 
 function scoreColor(score) {
-  if (score === null || score === undefined) return '#94a3b8';
-  if (score >= 8) return '#22c55e';
-  if (score >= 6) return '#f59e0b';
-  return '#ef4444';
+  if (score === null || score === undefined) return '#9A9A95';
+  if (score >= 8) return '#1A7040';
+  if (score >= 6) return '#9A6B00';
+  return '#B83232';
 }
 
 function scoreLabel(score) {

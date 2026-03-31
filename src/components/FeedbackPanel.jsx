@@ -10,7 +10,7 @@ const DIMENSION_META = {
 function ScoreBar({ score }) {
   if (score === null || score === undefined) return null;
   const pct = (score / 10) * 100;
-  const color = score >= 8 ? '#22c55e' : score >= 6 ? '#f59e0b' : '#ef4444';
+  const color = score >= 8 ? '#1A7040' : score >= 6 ? '#9A6B00' : '#B83232';
   return (
     <div className="score-bar">
       <div className="score-bar__track">
