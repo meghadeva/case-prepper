@@ -23,6 +23,7 @@ export default function CasePlayer({ caseId, onExit }) {
     loading,
     error,
     goToNextStep,
+    goToPreviousStep,
     resetCase,
   } = useCase(caseId);
 
@@ -70,11 +71,7 @@ export default function CasePlayer({ caseId, onExit }) {
     setHasSubmittedStep(false);
 
     if (isLastStep) {
-      // Save session and show debrief
       const finalResults = [...stepResults];
-      if (finalResults[currentStepIndex]) {
-        // already set
-      }
       saveSession(caseId, {
         stepResults: finalResults,
         caseTitle: caseData.title,
@@ -83,7 +80,7 @@ export default function CasePlayer({ caseId, onExit }) {
     } else {
       goToNextStep();
     }
-  }, [isLastStep, goToNextStep, clearEvaluation, stepResults, currentStepIndex, caseId, caseData]);
+  }, [isLastStep, goToNextStep, clearEvaluation, stepResults, caseId, caseData]);
 
   const handleSkip = useCallback(() => {
     clearEvaluation();
@@ -100,6 +97,20 @@ export default function CasePlayer({ caseId, onExit }) {
       goToNextStep();
     }
   }, [isLastStep, goToNextStep, clearEvaluation, stepResults, caseId, caseData]);
+
+  // Previous: go back one step, clearing state for the current step
+  const handlePrevious = useCallback(() => {
+    clearEvaluation();
+    setAnswer('');
+    setHasSubmittedStep(false);
+    // Remove any saved result for the current step so it's clean if re-answered
+    setStepResults((prev) => {
+      const updated = [...prev];
+      updated[currentStepIndex] = undefined;
+      return updated;
+    });
+    goToPreviousStep();
+  }, [clearEvaluation, goToPreviousStep, currentStepIndex]);
 
   const handleRetry = useCallback(() => {
     resetCase();
@@ -145,7 +156,13 @@ export default function CasePlayer({ caseId, onExit }) {
     );
   }
 
-  const progressPct = ((currentStepIndex) / totalSteps) * 100;
+  const progressPct = (currentStepIndex / totalSteps) * 100;
+  const canGoBack = currentStepIndex > 0;
+
+  // Split prompt on double-newlines for cleaner paragraph rendering
+  const promptParagraphs = caseData.prompt
+    ? caseData.prompt.split(/\n\n+/).filter(Boolean)
+    : [];
 
   return (
     <div className="case-player">
@@ -168,11 +185,13 @@ export default function CasePlayer({ caseId, onExit }) {
         />
       </div>
 
-      {/* Case intro (only on step 0 before submitting) */}
+      {/* Case intro — shown on step 0 before submitting */}
       {currentStepIndex === 0 && !hasSubmittedStep && (
         <div className="case-player__intro">
           <h2 className="case-player__intro-label">Case Background</h2>
-          <p className="case-player__intro-text">{caseData.prompt}</p>
+          {promptParagraphs.map((para, i) => (
+            <p key={i} className="case-player__intro-text">{para}</p>
+          ))}
         </div>
       )}
 
@@ -185,12 +204,28 @@ export default function CasePlayer({ caseId, onExit }) {
         />
 
         {!hasSubmittedStep ? (
-          <AnswerInput
-            value={answer}
-            onChange={setAnswer}
-            onSubmit={handleSubmit}
-            disabled={isEvaluating}
-          />
+          <>
+            <AnswerInput
+              value={answer}
+              onChange={setAnswer}
+              onSubmit={handleSubmit}
+              disabled={isEvaluating}
+            />
+
+            {/* Bottom navigation: Previous + Skip */}
+            <div className="case-player__bottom-nav">
+              {canGoBack ? (
+                <button className="btn btn--secondary" onClick={handlePrevious}>
+                  ← Previous
+                </button>
+              ) : (
+                <div />
+              )}
+              <button className="btn btn--ghost" onClick={handleSkip}>
+                Skip →
+              </button>
+            </div>
+          </>
         ) : (
           <>
             <div className="case-player__answer-review">
@@ -207,6 +242,11 @@ export default function CasePlayer({ caseId, onExit }) {
 
             {!isEvaluating && (
               <div className="case-player__step-actions">
+                {canGoBack && (
+                  <button className="btn btn--secondary" onClick={handlePrevious}>
+                    ← Previous
+                  </button>
+                )}
                 <button className="btn btn--primary" onClick={handleNext}>
                   {isLastStep ? 'View Full Debrief →' : 'Next Step →'}
                 </button>

@@ -24,3 +24,4 @@ yarn-error.log*
 
 # Claude local config
 .claude/
+.env

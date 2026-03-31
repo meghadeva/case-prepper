@@ -45,6 +45,10 @@ export function useCase(caseId) {
     setCurrentStepIndex((i) => i + 1);
   }, []);
 
+  const goToPreviousStep = useCallback(() => {
+    setCurrentStepIndex((i) => Math.max(0, i - 1));
+  }, []);
+
   const goToStep = useCallback((index) => {
     setCurrentStepIndex(index);
   }, []);
@@ -63,6 +67,7 @@ export function useCase(caseId) {
     loading,
     error,
     goToNextStep,
+    goToPreviousStep,
     goToStep,
     resetCase,
   };
